@@ -8,6 +8,7 @@ print("******** SECTION BSCOE 2-2 ***********")
 print("******* Sir Danilo Madrigalejos ******")
 print("")
 
+
 def message_probability(user_message, recognised_words, single_response=False, required_words=[]):
     message_certainty = 0
     has_required_words = True
@@ -47,7 +48,12 @@ def check_all_message(message):
     response(long.R_EATING, ['do', 'you', 'want', 'to', 'eat'], required_words=['you', 'eat'])
     response(long.R_PLACE, ['where', 'do', 'you', 'live'], required_words=['where', 'live'])
     response(long.R_DATETIME, ['what','is','the', 'date', 'and', 'time', 'today'], required_words=['date', 'time'])
+    response(long.R_CHEERUP, ['I am', 'sad', 'and',  'down',],required_words=['sad', 'down'])
+    response(long.R_IMPRESSION, ['impression', 'About', 'Me'], required_words=['impression', 'me'])
+    response(long.R_SPORTS, ['what', 'is', 'your', 'favorite', 'sport'], required_words=['favorite', 'sport'])
+
     best_match = max(highest_prob_list, key=highest_prob_list.get)
+
    # print(highest_prob_list)
 
     return long.unknown() if highest_prob_list[best_match] < 1 else best_match
@@ -59,3 +65,5 @@ def get_response(user_input):
 #testing response
 while True:
     print('Vision: ' + get_response(input("You: ")))
+
+
