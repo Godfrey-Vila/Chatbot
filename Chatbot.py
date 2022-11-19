@@ -1,7 +1,7 @@
 import re
 import long_responses as long
 
-
+#https://www.youtube.com/watch?v=Ea9jgBjQxEs&ab_channel=Indently
 print("********** PROGRAMMED BY:*************")
 print("********** GODFREY VILA **************")
 print("******** SECTION BSCOE 2-2 ***********")
@@ -51,7 +51,6 @@ def check_all_message(message):
     response(long.R_CHEERUP, ['I am', 'sad', 'and',  'down',],required_words=['sad', 'down'])
     response(long.R_IMPRESSION, ['impression', 'About', 'Me'], required_words=['impression', 'me'])
     response(long.R_SPORTS, ['what', 'is', 'your', 'favorite', 'sport'], required_words=['favorite', 'sport'])
-
     best_match = max(highest_prob_list, key=highest_prob_list.get)
 
    # print(highest_prob_list)
