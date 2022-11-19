@@ -25,6 +25,13 @@ def message_probability(user_message, recognised_words, single_response=False, r
         return int(percentage*100)
     else:
         return 0
+def check_all_message(message):
+    highest_prob_list = {}
+
+    def response(bot_response, list_of_words, sigle_response=False, required_words=[]):
+        nonlocal highest_prob_list
+        highest_prob_list[bot_response] = message_probability(message, list_of_words, sigle_response, required_words)
+
 
 def get_response(input):
     split_message = re.split(r'\s+|[,;?!.-]\s*', input.lower())
