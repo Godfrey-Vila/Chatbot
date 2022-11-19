@@ -1,6 +1,7 @@
 import re
 import long_responses as long
 
+
 print("********** PROGRAMMED BY:*************")
 print("********** GODFREY VILA **************")
 print("******** SECTION BSCOE 2-2 ***********")
@@ -34,15 +35,18 @@ def check_all_message(message):
     def response(bot_response, list_of_words, sigle_response=False, required_words=[]):
         nonlocal highest_prob_list
         highest_prob_list[bot_response] = message_probability(message, list_of_words, sigle_response, required_words)
-
     #responses of chat bot (Vison)
     response('Hello!', ['hello', 'hi', 'hey', 'sup', 'tol', 'par'], sigle_response=True)
-    response('I\'m Vision, your personal chat bot, and you?', ['what', 'is', 'your', 'name'],
+    response('I\'m Vision, your personal chat bot', ['what', 'is', 'your', 'name'],
              required_words=['what', 'your', 'name'])
-    response('I\'m Great!!, How about you?',['how', 'are', 'you'], required_words=['how'])
+    response('I\'m Vision, your personal chat bot', ['who', 'are', 'you'],
+           required_words=['who', 'you'])
+    response('As for today, I am 1 day old', ['how', 'old'])
+    response('I\'m Great!!, Thanks for asking',['how', 'are', 'you'], required_words=['how'])
     response('Thank You Very much', ['i', 'love', 'you', 'vision'], required_words=['love', 'vision'])
     response(long.R_EATING, ['do', 'you', 'want', 'to', 'eat'], required_words=['you', 'eat'])
-
+    response(long.R_PLACE, ['where', 'do', 'you', 'live'], required_words=['where', 'live'])
+    response(long.R_DATETIME, ['what','is','the', 'date', 'and', 'time', 'today'], required_words=['date', 'time'])
     best_match = max(highest_prob_list, key=highest_prob_list.get)
    # print(highest_prob_list)
 
