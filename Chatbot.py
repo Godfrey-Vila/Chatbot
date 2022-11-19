@@ -41,11 +41,12 @@ def check_all_message(message):
              required_words=['what', 'who'])
     response('I\'m Great!!, How about you?',['how', 'are', 'you'], required_words=['how'])
     response('Thank You Very much', ['i', 'love', 'you', 'vision'], required_words=['love', 'vision'])
+    response(long.R_EATING, ['do', 'you', 'want', 'to', 'eat'], required_words=['you', 'eat'])
 
     best_match = max(highest_prob_list, key=highest_prob_list.get)
-    print(highest_prob_list)
+   # print(highest_prob_list)
 
-    return best_match
+    return long.unknown() if highest_prob_list[best_match] < 1 else best_match
 
 def get_response(user_input):
     split_message = re.split(r'\s|[,;?!.-]\s*', user_input.lower())
