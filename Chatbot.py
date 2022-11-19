@@ -9,7 +9,8 @@ print("")
 
 def get_response(input):
     split_message = re.split(r'\s+|[,;?!.-]\s*', input.lower())
-
+    response = check_all_message(split_message)
+    return response
 #testing response
 while True:
     print('Vision: ' + get_response(input("You: ")))
