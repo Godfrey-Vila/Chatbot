@@ -37,8 +37,8 @@ def check_all_message(message):
 
     #responses of chat bot (Vison)
     response('Hello!', ['hello', 'hi', 'hey', 'sup', 'tol', 'par'], sigle_response=True)
-    response('I\'m Vision, your personal chat bot, and you?', ['what', 'is', 'your', 'name','who', 'are', 'you'],
-             required_words=['what', 'who'])
+    response('I\'m Vision, your personal chat bot, and you?', ['what', 'is', 'your', 'name'],
+             required_words=['what', 'your', 'name'])
     response('I\'m Great!!, How about you?',['how', 'are', 'you'], required_words=['how'])
     response('Thank You Very much', ['i', 'love', 'you', 'vision'], required_words=['love', 'vision'])
     response(long.R_EATING, ['do', 'you', 'want', 'to', 'eat'], required_words=['you', 'eat'])

@@ -5,6 +5,5 @@ def unknown():
     response = [' Sorry!, I cannot understand that',
                 'Can you please repeat it'
                 ' What is it?'
-                '...... no response, sorry!'
-                ][random.randrange(4)]
+                '...... no response, sorry!'][random.randrange(4)]
     return response
