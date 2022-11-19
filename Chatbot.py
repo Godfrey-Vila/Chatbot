@@ -34,6 +34,11 @@ def check_all_message(message):
 
     #responses of chat bot (Vison)
     response('Hello!', ['hello', 'hi', 'hey', 'sup', 'tol', 'par'], sigle_response=True)
+    response('I\'m Vision, your personal chat bot, and you?', ['what', 'is', 'your', 'name','who', 'are', 'you'],
+             required_words=['what', 'who'])
+    response('I\'m Great!!, How about you?',['how', 'are', 'you'], required_words=['how'])
+    response('Thank You Very much', ['i', 'love', 'you', 'vision'], required_words=['love', 'vision'])
+
 def get_response(input):
     split_message = re.split(r'\s+|[,;?!.-]\s*', input.lower())
     response = check_all_message(split_message)
