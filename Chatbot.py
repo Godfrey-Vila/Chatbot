@@ -32,7 +32,8 @@ def check_all_message(message):
         nonlocal highest_prob_list
         highest_prob_list[bot_response] = message_probability(message, list_of_words, sigle_response, required_words)
 
-
+    #responses of chat bot (Vison)
+    response('Hello!', ['hello', 'hi', 'hey', 'sup', 'tol', 'par'], sigle_response=True)
 def get_response(input):
     split_message = re.split(r'\s+|[,;?!.-]\s*', input.lower())
     response = check_all_message(split_message)
