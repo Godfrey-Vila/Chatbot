@@ -17,6 +17,15 @@ def message_probability(user_message, recognised_words, single_response=False, r
     # calculate the percentage of the recognized words in user.
     percentage = float(message_certainty) / float(len(recognised_words))
 
+    for word in recognised_words:
+        if word not in user_message:
+            has_required_words = False
+
+    if has_required_words or single_response:
+        return int(percentage*100)
+    else:
+        return 0
+
 def get_response(input):
     split_message = re.split(r'\s+|[,;?!.-]\s*', input.lower())
     response = check_all_message(split_message)
