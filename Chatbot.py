@@ -7,3 +7,6 @@ print("******** SECTION BSCOE 2-2 ***********")
 print("******* Sir Danilo Madrigalejos ******")
 print("")
 
+#testing response
+while True:
+    print('Vision: ' + get_response(input("You: ")))
