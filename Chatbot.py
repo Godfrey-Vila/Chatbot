@@ -7,6 +7,9 @@ print("******** SECTION BSCOE 2-2 ***********")
 print("******* Sir Danilo Madrigalejos ******")
 print("")
 
+def get_response(input):
+    split_message = re.split(r'\s+|[,;?!.-]\s*', input.lower())
+
 #testing response
 while True:
     print('Vision: ' + get_response(input("You: ")))
